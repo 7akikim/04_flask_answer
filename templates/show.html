@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+{% block title %}Show{% endblock %}
+
+{% block body %}
+
+<h1>SHOW</h1>
+
+<ul>
+    <li>
+        {{ movie.title }}
+        {{ movie.title_en }}
+        {{ movie.audience }}
+        {{ movie.open_date }}
+        {{ movie.genre }}
+        {{ movie.watch_grade }}
+        {{ movie.score }}
+        {{ movie.poster_url }}
+        {{ movie.description }}
+    </li>
+    <a href="/movies/">[목록]</a>
+    <a href="/movies/{{ movie.id }}/edit">[수정]</a>
+    <a href="/movies/{{ movie.id }}/delete">[삭제]</a>
+
+</ul>
+{% endblock %}

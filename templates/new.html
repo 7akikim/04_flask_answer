@@ -1,0 +1,23 @@
+{% extends "base.html" %}
+{% block title %}New{% endblock %}
+{% block body %}
+
+<h1>New</h1>
+
+<form action="/movies/create/">
+    영화명 : <input type="text" name="title"><br>
+    영화명(영문) : <input type="text" name="title_en"><br>
+    누적 관객수 : <input type="number" name="audience"><br>
+    개봉일 : <input type="date" name="open_date"><br>
+    장르 : <input type="text" name="genre"><br>
+    관람등급 : <input type="text" name="watch_grade"><br>
+    평점 : <input type="number" name="score" min="0" max="5" step="0.5"><br>
+    포스터이미지 : <input type="text" name="poster_url"><br>
+    영화소개 : <input type="textarea" name="description"><br>
+    <input type="submit" value="submit">
+</form>
+
+
+
+{% endblock %}
+
